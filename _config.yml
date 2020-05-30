@@ -5,14 +5,14 @@ description: | # 头像背后的信息（html格式），<br/>代表换行
 url: https://lumingze123.github.io # 域名
 baseurl: "" # 假如你的博客是建在某个目录下的，请在这里加上目录名，并且下面配置的所有链接里的`/assets`前也要加，即`/your_baseurl/assets`。这一项结尾不要有'/'。
 
-jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
+jekyll-theme-WuK:
   default:
     body:
-      theme-base: theme-base-0d # 可选的主题色包括08~0f，见 <https://github.com/poole/lanyon>
-      layout-reverse: false # 开启后sidebar在右边，反之左边
+      theme-base: theme-base-0d # 见 <https://github.com/poole/lanyon>
+      layout-reverse: false # true侧边栏在右边，false在左边
       sidebar-overlay: true # 开启后正文不随sidebar移动而移动
-    append_to_head: # 通过内嵌html的方式引入并定制插件，删改前确定知道自己在做什么。定制插件的方式可以参考这篇文章 <https://wu-kan.cn/_posts/2019-01-18-基于Jekyll搭建个人博客/>
-      - | #一些页面优化标签，看不懂可跳过
+    append_to_head: 
+      - | #页面优化标签
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=1"
@@ -27,7 +27,7 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
           title="RSS"
           type="application/rss+xml"
         />
-      - | # 网站小图标，可换成你自己的图片，改href中的部分即可
+      - | # 网站小图标
         <link
           rel="apple-touch-icon-precomposed"
           href=".\public\image\icon.jpg"
@@ -37,7 +37,7 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
           icon"
           href=".\public\image\icon.jpg"
         />
-      - | # 来自lanyon的页面样式，不要改
+      - | # lanyon页面样式
         <link
           rel="stylesheet"
           href="https://cdn.jsdelivr.net/combine/gh/poole/lanyon@v1.1.0/public/css/poole.min.css,gh/poole/lanyon@v1.1.0/public/css/lanyon.min.css"
@@ -62,7 +62,7 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
           gtag('js', new Date());
           gtag('config', 'UA-163543967-1');"
         ></script>
-      - | # 网站背景图片，分竖屏、宽屏；改链接即可，不想用可以把这一项全删掉；要换壁纸图片的话可把url内的部分换成你自己的，比如你放在 /assets/image/background.jpg，那就改成 url(/assets/image/background.jpg)
+      - | # 网站背景图片，分竖屏、宽屏
         <style>
           .wrap {
             transition-property: width,background-size,transform;
@@ -90,7 +90,7 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
             transform: translateX(0);
           }
         </style>
-      - | # 网站字体，要换字体建议架梯子上<https://fonts.google.com/>挑选，再通过fonts.loli.net 加速引入
+      - | # 网站字体，换字体<https://fonts.google.com/>，通过fonts.loli.net 加速引入
         <style>
           .sidebar,
           html,
@@ -143,7 +143,7 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
       avatar: # 侧边栏显示的头像
         enable: true
         img: 'http://b311.photo.store.qq.com/psb?/V10T7uxB2J5fJ7/E0eIjTTrodDvnhdOt6IrHxHY1mFFVsHtoze8q5WXBLc!/b/dDcBAAAAAAAA&bo=AAS0AgAAAAARB4I!&rf=viewer_4' # 头像的地址
-      nav: # 导航部分的内容，你也可以自己增加文字、图标（来自fontawesome）和对应的链接
+      nav: # 导航部分的内容
         - title: '<i class="fas fa-home fa-fw"></i> 首页'
           href: /
         - title: '<i class="fas fa-comments fa-fw"></i> 留言'
@@ -200,7 +200,7 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
             }
           </style>
       append_to_sidebar:
-        #- <script defer="defer" src="https://cdn.jsdelivr.net/gh/poole/lanyon@v1.1.0/public/js/script.min.js"></script> # 点击空白处而非按钮从而关闭侧边栏的插件，可选
+        #- <script defer="defer" src="https://cdn.jsdelivr.net/gh/poole/lanyon@v1.1.0/public/js/script.min.js"></script> # 点击空白处而非按钮从而关闭侧边栏的插件
         - | #修复点击侧边栏按钮回到顶部的问题
           <style>
             .sidebar-checkbox {
@@ -241,7 +241,7 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
               transform: rotate3d(0, 1, 0, -180deg);
             }
           </style>
-        - | # 运行时间，可将倒数第三行的时间改成你自己的建站时间，格式仿照上面的；不需要的话可以把这一项都删掉
+        - | # 运行时间
           <div>
             <i class="fas fa-cog fa-spin fa-fw"></i>
             <span id="run_time_day">
@@ -284,10 +284,10 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
               document.getElementById("run_time_hour"),
               document.getElementById("run_time_minute"),
               document.getElementById("run_time_second"),
-              "8/10/2019 18:00:00")  // 初试时间
+              "8/10/2019 18:00:00")  // 时间
             </script>
           </div>
-        - | # 不蒜子页面统计，看不懂可不改
+        - | # 不蒜子页面统计
           <div>
             <div>
               <i class="fas fa-eye fa-fw"></i>
@@ -419,7 +419,7 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
           }
         </style>
   comments: # 留言页
-    append: | # 配置评论区，appId和appKey需要换成你自己的，见<https://valine.js.org/configuration.html>，推荐再整一个评论管理系统<https://github.com/DesertsP/Valine-Admin>
+    append: | # 配置评论区，appId和appKey可替换，见<https://valine.js.org/configuration.html>，推荐再整一个评论管理系统<https://github.com/DesertsP/Valine-Admin>
       <div class="v">
         <i class="fas fa-spinner fa-pulse"></i>
       </div>
@@ -429,7 +429,7 @@ jekyll-theme-WuK: # 我的主题的自定义样式都在这个命名空间
         onload='
           new Valine({
             "el": document.getElementsByClassName("v")[0],
-            "appId": "M4qqR9unuueoVltzYUWGPc56-gzGzoHsz",
+            "appId": "M4qqR9unuueoVltzYUWGPc56-gzGzoHsz", 
             "appKey": "Yj6tpLb8czXapM3B4AJJnzxp",
             "placeholder": "在这里评论吧！",
             "requiredFields": ["nick","mail"],
@@ -563,26 +563,9 @@ readme_index: # 缺失index.md和index.html时，使用README.md代替之
   with_frontmatter: true # 支持带有yaml头的README
 
 permalink: /_posts/:year-:month-:day-:title/ #生成文章的地址格式，我希望它和_posts目录下的格式一样
-# timezone: Asia/Shanghai # 解决githubpage显示时间不正确的问题，见<https://www.iana.org/time-zones>
-# future: false # 不发布时间在未来的文章
-
-# limit_posts: 999 # 限制博文数量
-# encoding: utf-8
 
 markdown: kramdown
 kramdown: # 见<https://kramdown.gettalong.org/options.html>
   input: GFM # 见<http://jekyllcn.com/docs/configuration/#kramdown>
   syntax_highlighter_opts: # 可见<https://kramdown.gettalong.org/syntax_highlighter/rouge.html>
     disable: true # 关掉默认的高亮，换用prismjs
-
-# 以下为 githubpage上不可修改的参数，见<https://help.github.com/en/github/working-with-github-pages/about-github-pages-and-jekyll>
-#lsi: false # 为相关文章生成索引
-#safe: true # 禁用自定义插件
-#source: [your repo's top level directory] # Jekyll 读取文件的路径
-#incremental: false # 增量生成
-#highlighter: rouge # 代码高亮器
-#gist:
-#  noscript: false
-#kramdown:
-#  math_engine: mathjax
-#  syntax_highlighter: rouge
