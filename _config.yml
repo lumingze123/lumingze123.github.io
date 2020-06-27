@@ -159,8 +159,8 @@ jekyll-theme-WuK:
         append: | 
           <style>
             #sidebar-search-input {
-              background: none;
-              border: Black;
+              background: Black;
+              border: none;
               color: White;
               width: 100%;
             }
