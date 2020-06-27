@@ -21,22 +21,5 @@ showtag:
 
 - [更多…](/archive)  
 
-{% for tag in page.showtag %}
-
-## {{ tag }}
-
-{% for post in site.tags[tag] %}
-
-- [{{ post.title }}]({{ post.url }})
-
-{% if post.description %}
-
-  > {{ post.description }}
-
-{% endif %}
-
-{% endfor %}
-
-{% endfor %}
 
 
