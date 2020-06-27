@@ -160,7 +160,7 @@ jekyll-theme-WuK:
           <style>
             #sidebar-search-input {
               background: none;
-              border: black;
+              border: Black;
               color: White;
               width: 100%;
             }
