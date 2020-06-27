@@ -514,7 +514,7 @@ jekyll-theme-WuK:
           href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css"
           rel="stylesheet"
         />
-      - | # 仿 github 页面样式
+      - | # 仿 github 页面样式；
         <style>
           .markdown-body {
             box-sizing: border-box;
