@@ -159,9 +159,9 @@ jekyll-theme-WuK:
         append: | 
           <style>
             #sidebar-search-input {
-              background: Black;
+              background: White;
               border: none;
-              color: White;
+              color: Black;
               width: 100%;
             }
             #sidebar-search-results-container {
@@ -171,7 +171,7 @@ jekyll-theme-WuK:
           </style>
           <input
             id="sidebar-search-input"
-            placeholder="搜索博文"
+            placeholder="---搜索---"
           />
           <ol
             id="sidebar-search-results-container"
@@ -199,7 +199,7 @@ jekyll-theme-WuK:
             }
           </style>
       append_to_sidebar:
-        #- <script defer="defer" src="https://cdn.jsdelivr.net/gh/poole/lanyon@v1.1.0/public/js/script.min.js"></script> # 点击空白处而非按钮从而关闭侧边栏的插件
+        - <script defer="defer" src="https://cdn.jsdelivr.net/gh/poole/lanyon@v1.1.0/public/js/script.min.js"></script> # 点击空白处而非按钮从而关闭侧边栏的插件
         - | #修复点击侧边栏按钮回到顶部的问题
           <style>
             .sidebar-checkbox {
