@@ -1,9 +1,7 @@
 title: 肥宅日志 # 站点标题
 description: | # 头像背后的信息（html格式），<br/>代表换行
   低调的鸣泽_<br/>-只有停止脚步才是退步-<br/>dyhtszd!!!<br/>
-  <div style="left: 10px;top: 700px">
-    <object height="100" width="1000" data="assets\lie.m4a"></object>
-  </div>
+    <object height="30" width="100%" data="assets\lie.m4a"></object>
   <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=100% height=52 src="//music.163.com/outchain/player?type=2&id=1436168867&auto=0&height=32"></iframe>
 url: https://lumingze123.github.io # 域名
 baseurl: "" # 假如你的博客是建在某个目录下的，请在这里加上目录名，并且下面配置的所有链接里的`/assets`前也要加，即`/your_baseurl/assets`。这一项结尾不要有'/'。
