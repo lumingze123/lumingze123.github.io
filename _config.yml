@@ -61,7 +61,7 @@ jekyll-theme-WuK:
           gtag('js', new Date());
           gtag('config', 'UA-163543967-1');"
         ></script>
-      - | # 网站背景图片，分竖屏、宽屏
+      - | # 网站背景图片，分竖屏、宽屏,根据浏览器比例自动切换
         <style>
           .wrap {
             transition-property: width,background-size,transform;
@@ -143,24 +143,24 @@ jekyll-theme-WuK:
         enable: true
         img: 'http://b311.photo.store.qq.com/psb?/V10T7uxB2J5fJ7/E0eIjTTrodDvnhdOt6IrHxHY1mFFVsHtoze8q5WXBLc!/b/dDcBAAAAAAAA&bo=AAS0AgAAAAARB4I!&rf=viewer_4' # 头像的地址
       nav: # 导航部分的内容
-        - title: '<i class="fas fa-home fa-fw"></i> 首页'
+        - title: '<i class="fas fa-home fa-fw"></i> 主页'
           href: /
-        - title: '<i class="fas fa-comments fa-fw"></i> 留言'
-          href: /comments/
         - title: '<i class="fas fa-tags fa-fw"></i> 标签'
           href: /tags/
         - title: '<i class="fas fa-archive fa-fw"></i> 归档'
           href: /archive/
+        - title: '<i class="fas fa-comments fa-fw"></i> 留言'
+          href: /comments/
         - title: '<i class="fa fa-info-circle fa-fw"></i> 关于'
           href: /about/
       simple_jekyll_search: # 侧边栏的全站搜索
         enable: true
         full_text_search: false # 可能导致缓慢的搜索和加载
-        append: | # 如果看不懂就不改
+        append: | 
           <style>
             #sidebar-search-input {
               background: none;
-              border: none;
+              border: black;
               color: White;
               width: 100%;
             }
